@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 14:55:52 by jmontero          #+#    #+#             */
-/*   Updated: 2021/10/25 12:53:39 by jmontero         ###   ########.fr       */
+/*   Created: 2021/10/25 13:14:45 by jmontero          #+#    #+#             */
+/*   Updated: 2021/10/25 13:18:44 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int ft_tolower(int c)
 {
-	while (n--)
-	{
-		((unsigned char *)s)[n] = 0;
-	}
+	if (c > 64 && c < 91)
+		return (c + 32);
+	else
+		return (c);
 }

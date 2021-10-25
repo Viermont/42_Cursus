@@ -5,9 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 16:16:03 by jmontero          #+#    #+#             */
-/*   Updated: 2021/10/19 16:16:07 by jmontero         ###   ########.fr       */
+/*   Created: 2021/10/25 13:01:03 by jmontero          #+#    #+#             */
+/*   Updated: 2021/10/25 13:06:39 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+int	ft_toupper(int c)
+{
+	if (c > 96 && c < 123)
+		return (c - 32);
+	else
+		return (c);	
+}

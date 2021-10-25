@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 14:55:52 by jmontero          #+#    #+#             */
-/*   Updated: 2021/10/25 12:53:39 by jmontero         ###   ########.fr       */
+/*   Created: 2021/10/25 17:03:29 by jmontero          #+#    #+#             */
+/*   Updated: 2021/10/25 18:04:42 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	while (n--)
+	size_t	count;
+
+	count = 0;
+	while ((unsigned char *)s[count] != '\0' || count < n)
 	{
-		((unsigned char *)s)[n] = 0;
+		if (s[count] == (unsigned char)c)
+			return ((unsigned char *)s + count); 
 	}
+	return (0);
 }

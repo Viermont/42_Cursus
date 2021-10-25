@@ -6,7 +6,7 @@
 #    By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 13:04:35 by jmontero          #+#    #+#              #
-#    Updated: 2021/10/22 11:23:46 by jmontero         ###   ########.fr        #
+#    Updated: 2021/10/25 17:43:04 by jmontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,12 @@ SRC		= ft_isalpha.c \
 		  ft_memcpy.c \
 		  ft_memmove.c \
 		  ft_strlcpy.c \
-		  ft_strlcat.c
+		  ft_strlcat.c \
+		  ft_toupper.c \
+		  ft_tolower.c \
+		  ft_strchr.c \
+		  ft_strrchr.c \
+		  ft_memchr.c
 
 OBJS	= $(SRC:.c=.o)
 

@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 14:55:52 by jmontero          #+#    #+#             */
-/*   Updated: 2021/10/25 12:53:39 by jmontero         ###   ########.fr       */
+/*   Created: 2021/10/25 13:19:45 by jmontero          #+#    #+#             */
+/*   Updated: 2021/10/25 15:00:43 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char *ft_strchr(const char *s, int c)
 {
-	while (n--)
+	int	count;
+	char a;
+
+	a = c + '0';
+	count = 0;
+	while (s[count] != '\0')
 	{
-		((unsigned char *)s)[n] = 0;
+		if (s[count] == a)
+		return ((char *)(s + count));
+		count++;
 	}
+	return (0);
 }
