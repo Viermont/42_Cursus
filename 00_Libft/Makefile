@@ -6,7 +6,7 @@
 #    By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 13:04:35 by jmontero          #+#    #+#              #
-#    Updated: 2021/10/25 17:43:04 by jmontero         ###   ########.fr        #
+#    Updated: 2021/10/27 13:10:43 by jmontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ SRC		= ft_isalpha.c \
 		  ft_tolower.c \
 		  ft_strchr.c \
 		  ft_strrchr.c \
-		  ft_memchr.c
+		  ft_memchr.c \
+		  ft_memcmp.c
 
 OBJS	= $(SRC:.c=.o)
 
