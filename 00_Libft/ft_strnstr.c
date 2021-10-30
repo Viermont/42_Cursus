@@ -10,4 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)//ok desde aqui
+{
+	size_t	c1;
+	size_t	c2;
+
+	c1 = 0;
+	if (s2[c1] == '\0')
+		return ((char *)s1);
+
+	while (s1[c1] != '\0')
+	{
+		c2 = 0;
+		while (s1[c1 + c2] == s2[c2] && (c1 + c2) < len)
+		{	
+			if (s2[c2 + 1] == '\0')
+				return ((char *)&s1[c1]);
+			c2++;
+		}
+		c1++;
+	}
+	return (0);
+}

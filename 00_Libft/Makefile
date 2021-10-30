@@ -29,7 +29,8 @@ SRC		= ft_isalpha.c \
 		  ft_strchr.c \
 		  ft_strrchr.c \
 		  ft_memchr.c \
-		  ft_memcmp.c
+		  ft_memcmp.c \
+		  ft_strnstr.c
 
 OBJS	= $(SRC:.c=.o)
 
@@ -40,10 +41,10 @@ CC		= gcc
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-all: $(NAME)
-
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+
+all: $(NAME)
 
 clean:
 	rm -rf $(OBJS)
