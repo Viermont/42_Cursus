@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 14:00:24 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/08 10:40:34 by jmontero         ###   ########.fr       */
+/*   Created: 2021/11/08 19:02:00 by jmontero          #+#    #+#             */
+/*   Updated: 2021/11/08 21:06:37 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t			pos;
-	int			posneg;
-	unsigned long long	n;
-
-	pos = 0;
-	posneg = 1;
-	n = 0;
-	if (nptr[pos] == '\0')
-		return (0);	
-	while ((nptr[pos] >= 9 && nptr[pos] <= 13) || nptr[pos] == 32)
-		pos++;
-	if (nptr[pos] == '+' || nptr[pos] == '-')
+	size_t	count;
+	
+	if (n == 0)
+		return (0);
+	count = 0;
+	while (count < n)
 	{
-		if (nptr[pos] == '-')
-			posneg = -1;
-		pos++;
+		if (s1[count] && (unsigned char)s1[count] == (unsigned char)s2[count])
+		{
+			while (s1[count] && s1[count] == s2[count] && count < n)
+			count++;
+		}	
+		else
+			return ((unsigned char)s1[count] - (unsigned char)s2[count]);
 	}
-	while (nptr[pos] >= '0' && nptr[pos] <= '9')
-	{
-		n = (nptr[pos] - 48) + n * 10;
-		pos++;
-	}
-	return (n * posneg);
+	return (0);
 }

@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 10:48:16 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/08 10:48:22 by jmontero         ###   ########.fr       */
+/*   Created: 2021/11/08 10:54:01 by jmontero          #+#    #+#             */
+/*   Updated: 2021/11/08 18:09:15 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*dst;
+	size_t	start;
+	size_t	finish;
 
-	dst = malloc(ft_strlen(s) + 1);
-	if (!dst)
+	if (!s1 || !set)
 		return (0);
-	return (ft_memcpy(dst, s, ft_strlen(s) + 1));
+	start = 0;
+	finish = ft_strlen(s1);
+	while (ft_strchr(set, s1[start]) && s1[start] != '\0')
+		start++;
+	while (ft_strchr(set, s1[finish]) && finish >= 0)
+		finish--;
+	return (ft_substr(s1, start, finish - start + 1));
 }
