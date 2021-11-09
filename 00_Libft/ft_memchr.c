@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 17:03:29 by jmontero          #+#    #+#             */
-/*   Updated: 2021/10/27 11:45:36 by jmontero         ###   ########.fr       */
+/*   Updated: 2021/11/09 17:34:38 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (*(unsigned char *)(s + count) == (unsigned char)c)
 			return ((void *)(s + count));
-	   count++;	
+		count++;
 	}
 	return (0);
 }

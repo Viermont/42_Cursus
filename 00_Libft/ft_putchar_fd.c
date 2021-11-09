@@ -6,8 +6,14 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:56:58 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/08 10:57:02 by jmontero         ###   ########.fr       */
+/*   Updated: 2021/11/09 19:15:40 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <unistd.h>
 
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);	
+}

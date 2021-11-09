@@ -6,7 +6,7 @@
 #    By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 13:04:35 by jmontero          #+#    #+#              #
-#    Updated: 2021/11/08 19:27:04 by jmontero         ###   ########.fr        #
+#    Updated: 2021/11/09 20:13:54 by jmontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,15 @@ SRC		= ft_isalpha.c \
 		  ft_strdup.c \
 		  ft_substr.c \
 		  ft_strjoin.c \
-		  ft_strtrim.c
-				
+		  ft_strtrim.c \
+		  ft_itoa.c \
+		  ft_strmapi.c \
+		  ft_striteri.c \
+		  ft_putchar_fd.c \
+		  ft_putstr_fd.c \
+		  ft_putendl_fd.c \
+		  ft_putnbr_fd.c
+
 OBJS	= $(SRC:.c=.o)
 
 CFLAGS	= -Wall -Werror -Wextra
