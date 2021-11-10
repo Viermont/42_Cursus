@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:53:34 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/09 19:59:32 by jmontero         ###   ########.fr       */
+/*   Updated: 2021/11/10 13:00:41 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char   *dst;
     size_t	count;
-	size_t	finish;	
+	size_t	finish;
+	size_t	i;
 
+	i = 0;
 	if (!s1 || !s2)
 		return (0);
     count = 0;
@@ -31,10 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
         count++;
     }
 	dst[finish] = '\0';
-    while (finish >= count)
-    {
-        dst[finish] = s2[finish - (size_t)ft_strlen(s1)];
-        finish--;
-    }
+	while (finish > count)
+        dst[count++] = s2[i++];
 	return (dst);
 }
