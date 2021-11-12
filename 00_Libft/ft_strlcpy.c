@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 17:48:05 by jmontero          #+#    #+#             */
-/*   Updated: 2021/10/19 10:56:13 by jmontero         ###   ########.fr       */
+/*   Updated: 2021/11/12 19:08:57 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 		dst[pos] = '\0';
 	}
-return (ft_strlen(src));
+	return (ft_strlen(src));
 }

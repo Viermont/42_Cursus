@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:58:26 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/10 12:04:28 by jmontero         ###   ########.fr       */
+/*   Updated: 2021/11/12 19:12:08 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd(n % 10 + '0', fd);
 }
-

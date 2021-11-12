@@ -6,13 +6,13 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 13:14:45 by jmontero          #+#    #+#             */
-/*   Updated: 2021/10/25 13:18:44 by jmontero         ###   ########.fr       */
+/*   Updated: 2021/11/12 19:05:58 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c > 64 && c < 91)
 		return (c + 32);

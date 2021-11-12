@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 13:59:59 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/08 19:41:40 by jmontero         ###   ########.fr       */
+/*   Updated: 2021/11/12 19:08:12 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	c1 = 0;
 	if (s2[c1] == '\0')
 		return ((char *)s1);
-
 	while (s1[c1] != '\0')
 	{
 		c2 = 0;
