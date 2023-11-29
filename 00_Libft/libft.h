@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:26:44 by jmontero          #+#    #+#             */
-/*   Updated: 2023/11/29 00:52:48 by jmontero         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:04:03 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 typedef struct s_list
 {
-	void		*content;
+	void			*content;
 	struct s_list	*next;
 }	t_list;
 

@@ -6,7 +6,7 @@
 #    By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 13:04:35 by jmontero          #+#    #+#              #
-#    Updated: 2021/11/09 20:13:54 by jmontero         ###   ########.fr        #
+#    Updated: 2023/11/29 17:08:48 by jmontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,11 @@ SRC		= ft_isalpha.c \
 		  ft_putnbr_fd.c \
 		  ft_split.c
 
-OBJS	= $(SRC:.c=.o)
+SRC_BON	= ft_lstnew.c
+
+OBJ		= $(SRC:.c=.o)
+
+OBJ_BON	= $(SRC_BON:.c=.o)
 
 CFLAGS	= -Wall -Werror -Wextra
 
@@ -56,17 +60,20 @@ CC		= gcc
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 all: $(NAME)
 
+bonus: $(OBJ_BON)
+	ar rcs $(NAME) $(OBJ_BON)
+
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJ) $(OBJ_BON)
 
 fclean:
-	rm -rf $(OBJS) $(NAME) 
+	rm -rf $(OBJ) $(NAME) 
 
 re: fclean all
 
-.PHONY: all clean fclean
+.PHONY: all bonus clean fclean

@@ -4,4 +4,4 @@
 *.out
 *.swp
 *.gch
-Tests/*
+Testers/*

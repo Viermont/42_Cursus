@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:02:00 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/09 19:39:38 by jmontero         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:01:12 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		count++;
 	}
 	return ((unsigned char)s1[count] - (unsigned char)s2[count]);
-}	
+}
