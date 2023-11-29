@@ -6,14 +6,19 @@
 /*   By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:26:44 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/12 19:35:28 by jmontero         ###   ########.fr       */
+/*   Updated: 2023/11/29 00:52:48 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void		*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -49,5 +54,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_split(char const *s, char c);
+t_list	*ft_lstnew(void *content);
 
 #endif
