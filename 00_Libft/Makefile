@@ -6,7 +6,7 @@
 #    By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 13:04:35 by jmontero          #+#    #+#              #
-#    Updated: 2023/11/29 17:08:48 by jmontero         ###   ########.fr        #
+#    Updated: 2023/12/04 15:24:03 by jmontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,12 @@ SRC		= ft_isalpha.c \
 		  ft_putnbr_fd.c \
 		  ft_split.c
 
-SRC_BON	= ft_lstnew.c
+SRC_BON	= ft_lstnew.c \
+		  ft_lstadd_front.c \
+		  ft_lstsize.c \
+		  ft_lstlast.c \
+		  ft_lstadd_back.c \
+		  ft_lstdelone.c
 
 OBJ		= $(SRC:.c=.o)
 
