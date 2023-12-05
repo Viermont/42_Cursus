@@ -6,7 +6,7 @@
 #    By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 13:04:35 by jmontero          #+#    #+#              #
-#    Updated: 2023/12/04 15:24:03 by jmontero         ###   ########.fr        #
+#    Updated: 2023/12/05 10:36:15 by jmontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,9 @@ SRC_BON	= ft_lstnew.c \
 		  ft_lstsize.c \
 		  ft_lstlast.c \
 		  ft_lstadd_back.c \
-		  ft_lstdelone.c
+		  ft_lstdelone.c \
+		  ft_lstclear.c \
+		  ft_lstiter.c
 
 OBJ		= $(SRC:.c=.o)
 
