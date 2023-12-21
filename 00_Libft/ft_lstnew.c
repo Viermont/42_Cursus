@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:41:40 by jmontero          #+#    #+#             */
-/*   Updated: 2023/11/29 16:00:04 by jmontero         ###   ########.fr       */
+/*   Updated: 2023/12/21 11:46:21 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*nlst;
+	t_list	*newlst;
 
-	nlst = malloc(sizeof(t_list));
-	if (!nlst)
+	newlst = malloc(sizeof(t_list));
+	if (!newlst)
 	{
 		return (NULL);
 	}
-	nlst->content = content;
-	nlst->next = NULL;
-	return (nlst);
+	newlst->content = content;
+	newlst->next = NULL;
+	return (newlst);
 }
