@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 21:54:07 by jmontero          #+#    #+#             */
-/*   Updated: 2023/12/20 23:27:59 by jmontero         ###   ########.fr       */
+/*   Updated: 2023/12/29 09:56:38 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *next;
+	t_list	*next;
 
 	while (*lst && del)
 	{

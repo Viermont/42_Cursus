@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:47:52 by jmontero          #+#    #+#             */
-/*   Updated: 2023/12/20 22:27:13 by jmontero         ###   ########.fr       */
+/*   Updated: 2023/12/29 09:56:05 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (0);
 	dst = malloc(nmemb * size);
 	if (!dst)
-		return(0);
+		return (0);
 	ft_bzero(dst, nmemb * size);
-
-	return dst;
+	return (dst);
 }
