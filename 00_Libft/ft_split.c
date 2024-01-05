@@ -6,7 +6,7 @@
 /*   By: jmontero <jmontero@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:54:30 by jmontero          #+#    #+#             */
-/*   Updated: 2021/11/12 19:35:20 by jmontero         ###   ########.fr       */
+/*   Updated: 2024/01/03 17:53:07 by jmontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,16 @@ static char	**ft_submallocs(char **dst, char const *s, char c, size_t numstr)
 			count++;
 		finish = count;
 		dst[num] = ft_substrings(s, start, finish);
+		if (!dst[num])
+		{
+			while (num > 0)
+			{
+				free(dst[num - 1]);
+				num--;
+			}
+			free(dst);
+			return (NULL);
+		}
 		num++;
 	}
 	dst[num] = NULL;
