@@ -82,11 +82,8 @@ bonus:	.bonus
 clean:
 	rm -rf $(OBJ) $(OBJ_BON)
 
-#fclean:
-#	rm -rf $(OBJ) $(NAME)
-
-fclean:	clean
-	$(RM) $(NAME) .bonus
+fclean:
+	rm -rf $(OBJ) $(NAME) .bonus
 
 re: fclean all
 
