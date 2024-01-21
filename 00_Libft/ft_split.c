@@ -51,6 +51,16 @@ static char	*ft_substrings(char const *s, size_t start, size_t finish)
 	return (dst);
 }
 
+static void	ft_dstfree(char **dst, size_t num)
+{
+	while (num > 0)
+	{
+		free(dst[num - 1]);
+		num--;
+	}
+	free(dst);
+}
+
 static char	**ft_submallocs(char **dst, char const *s, char c, size_t numstr)
 {
 	size_t	count;
@@ -71,12 +81,7 @@ static char	**ft_submallocs(char **dst, char const *s, char c, size_t numstr)
 		dst[num] = ft_substrings(s, start, finish);
 		if (!dst[num])
 		{
-			while (num > 0)
-			{
-				free(dst[num - 1]);
-				num--;
-			}
-			free(dst);
+			ft_dstfree(dst, num);
 			return (NULL);
 		}
 		num++;
